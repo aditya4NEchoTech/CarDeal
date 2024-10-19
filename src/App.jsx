@@ -10,6 +10,8 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import './styles/global.css';
 import './styles/tailwind.css'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   return (
