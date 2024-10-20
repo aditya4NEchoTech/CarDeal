@@ -61,203 +61,23 @@ const HomePage = () => {
     },
   ];
 
-  
-
-  // const CustomerSupportSection = () => {
-  //   return (
-  //     <section className="py-16 bg-green-800 text-white">
-  //       <div className="max-w-6xl mx-auto px-6 text-center">
-  //         <h2 className="text-4xl font-bold mb-6">Customer Support Center</h2>
-  //         <p className="mb-8 text-gray-300">
-  //           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet
-  //           nemo expedita accusantium.
-  //         </p>
-  //         <Swiper
-  //           slidesPerView={4} // Default for desktop
-  //           spaceBetween={30}
-  //           navigation
-  //           pagination={{ clickable: true }}
-  //           breakpoints={{
-  //             1024: { slidesPerView: 4 }, // Web
-  //             768: { slidesPerView: 3 }, // Tablet
-  //             640: { slidesPerView: 2 }, // Mobile
-  //           }}
-  //         >
-  //           <SwiperSlide>
-  //             <div className="support-card">
-  //               <img src="person1.jpg" alt="Person 1" />
-  //               <h3>MARTIN DOE</h3>
-  //               <p>Software Engineer</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="support-card">
-  //               <img src="person2.jpg" alt="Person 2" />
-  //               <h3>JANE SMITH</h3>
-  //               <p>Graphic Designer</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="support-card">
-  //               <img src="person3.jpg" alt="Person 3" />
-  //               <h3>ALICE JOHNSON</h3>
-  //               <p>Product Manager</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="support-card">
-  //               <img src="person4.jpg" alt="Person 4" />
-  //               <h3>BOB BROWN</h3>
-  //               <p>UX Designer</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="support-card">
-  //               <img src="person5.jpg" alt="Person 5" />
-  //               <h3>CHARLIE WHITE</h3>
-  //               <p>Data Analyst</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="support-card">
-  //               <img src="person6.jpg" alt="Person 6" />
-  //               <h3>EMMA WATSON</h3>
-  //               <p>Marketing Specialist</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="support-card">
-  //               <img src="person7.jpg" alt="Person 7" />
-  //               <h3>DAVID SMITH</h3>
-  //               <p>Content Writer</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="support-card">
-  //               <img src="person8.jpg" alt="Person 8" />
-  //               <h3>SOPHIA BROWN</h3>
-  //               <p>SEO Expert</p>
-  //             </div>
-  //           </SwiperSlide>
-  //         </Swiper>
-  //       </div>
-  //     </section>
-  //   );
-  // };
-
-  // const ClientReviewsSection = () => {
-  //   return (
-  //     <section className="py-16 bg-gray-100 text-black">
-  //       <div className="max-w-6xl mx-auto px-6 text-center">
-  //         <h2 className="text-4xl font-bold mb-6">Our Clients Reviews</h2>
-  //         <p className="mb-8 text-gray-700">
-  //           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-  //         </p>
-  //         <Swiper
-  //           slidesPerView={2} // Default for web and tablets
-  //           spaceBetween={30}
-  //           navigation
-  //           pagination={{ clickable: true }}
-  //           breakpoints={{
-  //             1024: { slidesPerView: 2 }, // Web
-  //             768: { slidesPerView: 2 }, // Tablet
-  //             640: { slidesPerView: 1 }, // Mobile
-  //           }}
-  //         >
-  //           <SwiperSlide>
-  //             <div className="review-card">
-  //               <img src="client1.jpg" alt="Client 1" />
-  //               <h3>Person Name 1</h3>
-  //               <p>Profession 1</p>
-  //               <div className="rating-stars">★★★★☆</div>
-  //               <p>Review content goes here...</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="review-card">
-  //               <img src="client2.jpg" alt="Client 2" />
-  //               <h3>Person Name 2</h3>
-  //               <p>Profession 2</p>
-  //               <div className="rating-stars">★★★☆☆</div>
-  //               <p>Review content goes here...</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="review-card">
-  //               <img src="client3.jpg" alt="Client 3" />
-  //               <h3>Person Name 3</h3>
-  //               <p>Profession 3</p>
-  //               <div className="rating-stars">★★★★★</div>
-  //               <p>Review content goes here...</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="review-card">
-  //               <img src="client4.jpg" alt="Client 4" />
-  //               <h3>Person Name 4</h3>
-  //               <p>Profession 4</p>
-  //               <div className="rating-stars">★★★★☆</div>
-  //               <p>Review content goes here...</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="review-card">
-  //               <img src="client5.jpg" alt="Client 5" />
-  //               <h3>Person Name 5</h3>
-  //               <p>Profession 5</p>
-  //               <div className="rating-stars">★★★☆☆</div>
-  //               <p>Review content goes here...</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="review-card">
-  //               <img src="client6.jpg" alt="Client 6" />
-  //               <h3>Person Name 6</h3>
-  //               <p>Profession 6</p>
-  //               <div className="rating-stars">★★★★☆</div>
-  //               <p>Review content goes here...</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="review-card">
-  //               <img src="client7.jpg" alt="Client 7" />
-  //               <h3>Person Name 7</h3>
-  //               <p>Profession 7</p>
-  //               <div className="rating-stars">★★★★★</div>
-  //               <p>Review content goes here...</p>
-  //             </div>
-  //           </SwiperSlide>
-  //           <SwiperSlide>
-  //             <div className="review-card">
-  //               <img src="client8.jpg" alt="Client 8" />
-  //               <h3>Person Name 8</h3>
-  //               <p>Profession 8</p>
-  //               <div className="rating-stars">★★☆☆☆</div>
-  //               <p>Review content goes here...</p>
-  //             </div>
-  //           </SwiperSlide>
-  //         </Swiper>
-  //       </div>
-  //     </section>
-  //   );
-  // };
-
   return (
     <div>
       {/* Hero Section */}
       <div
         className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: "url('/path-to-your-hero-image.jpg')" }}
+        style={{ backgroundImage: "url('./assets/bg.jpg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
+        <div className="relative z-10 flex flex-col items-start justify-center h-full text-white ml-[150px]">
+
           <h2 className="text-3xl font-bold">Get 15% off your rental</h2>
           <p className="mt-4 text-lg">
             Plan your trip now. Treat yourself in USA.
           </p>
 
           {/* Car Reservation Form */}
-          <div className="bg-white bg-opacity-90 p-6 mt-8 rounded-lg shadow-lg w-full max-w-md">
+          <div className="bg-black bg-opacity-90 p-6 mt-8 rounded-lg shadow-lg w-full max-w-md">
             <h3 className="text-xl font-bold mb-4 text-center">
               Continue Car Reservation
             </h3>
@@ -806,7 +626,7 @@ const HomePage = () => {
       </div>
     </section>
 
-    
+
       {/* <ClientReviewsSection /> */}
 
       <section className="py-16 bg-gray-100 text-black">

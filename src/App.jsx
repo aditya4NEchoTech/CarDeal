@@ -8,6 +8,7 @@ import SellCarPage from './pages/SellCarPage';
 import ContactPage from './pages/ContactPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
+import AdminDashboard from './admin/AdminDashboard';
 import './styles/global.css';
 import './styles/tailwind.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/AdminDashboard" element={<AdminDashboard />} />
           </Routes>
         </main>
         <Footer />

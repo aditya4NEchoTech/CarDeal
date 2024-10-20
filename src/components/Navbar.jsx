@@ -62,8 +62,11 @@ const Navbar = () => {
             to="/"
             className="text-2xl font-bold text-red-600 flex items-center space-x-1"
           >
-            {/* <FaCarAlt className="text-3xl" /> */}
-            <span>Cental</span>
+            <img
+              src="/assets/car-logo.png"
+              alt="Car Logo"
+              className="w-[80%] h-[80%]"
+            />
           </Link>
 
           {/* Desktop Menu */}
@@ -91,6 +94,13 @@ const Navbar = () => {
               className="hover:text-gray-300 transition duration-300 ease-in-out"
             >
               Contact Us
+            </Link>
+
+            <Link
+              to="/AdminDashboard"
+              className="hover:text-gray-300 transition duration-300 ease-in-out"
+            >
+              Dashboard
             </Link>
           </div>
 
@@ -153,6 +163,14 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               Contact Us
+            </Link>
+
+            <Link
+              to="/AdminDashboard"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out"
+              onClick={toggleMenu}
+            >
+              Dashboard
             </Link>
           </div>
         )}
