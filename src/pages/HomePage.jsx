@@ -7,7 +7,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const HomePage = () => {
   const cars = [
@@ -25,19 +30,19 @@ const HomePage = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Shows 3 items on larger screens
+    slidesToShow: 3, 
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024, // Tablet breakpoint
+        breakpoint: 1024, 
         settings: {
-          slidesToShow: 2, // Show 2 items on tablets
+          slidesToShow: 2, 
         },
       },
       {
-        breakpoint: 640, // Mobile breakpoint
+        breakpoint: 640,
         settings: {
-          slidesToShow: 1, // Show 1 item on mobile
+          slidesToShow: 1, 
         },
       },
     ],
@@ -47,17 +52,17 @@ const HomePage = () => {
     {
       name: "Mercedes Benz R3",
       price: "$900/Day",
-      imgSrc: "/path-to-mercedes-image.jpg",
+      imgSrc: "./assets/car-2.jpg",
     },
     {
       name: "Toyota Corolla Cross",
       price: "$1200/Day",
-      imgSrc: "/path-to-toyota-image.jpg",
+      imgSrc: "./assets/car-6.jpg",
     },
     {
       name: "Tesla Model S Plaid",
       price: "$1700/Day",
-      imgSrc: "/path-to-tesla-image.jpg",
+      imgSrc: "./assets/car-5.jpg",
     },
   ];
 
@@ -66,11 +71,13 @@ const HomePage = () => {
       {/* Hero Section */}
       <div
         className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: "url('./assets/bg.jpg')" }}
+        style={{ backgroundImage: "url('./assets/bg-light.jpg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 flex flex-col items-start justify-center h-full text-white ml-[150px]">
-
+        <div
+          className="relative z-10 flex flex-col items-flex-start justify-center h-full text-white"
+          style={{ marginLeft: "150px" }} 
+        >
           <h2 className="text-3xl font-bold">Get 15% off your rental</h2>
           <p className="mt-4 text-lg">
             Plan your trip now. Treat yourself in USA.
@@ -84,7 +91,9 @@ const HomePage = () => {
             <form>
               <div className="mb-4">
                 <label className="block text-sm">Select Your Car Type</label>
-                <select className="w-full p-2 mt-2 border rounded">
+                <select
+                  className="w-full p-2 mt-2 border rounded bg-black text-white" 
+                >
                   <option>Select Car</option>
                   <option>Toyota Corolla</option>
                   <option>Honda Civic</option>
@@ -97,7 +106,7 @@ const HomePage = () => {
                 <input
                   type="text"
                   placeholder="Enter a City or Airport"
-                  className="w-full p-2 mt-2 border rounded"
+                  className="w-full p-2 mt-2 border rounded bg-black text-white" 
                   value={pickupLocation}
                   onChange={(e) => setPickupLocation(e.target.value)}
                 />
@@ -108,7 +117,7 @@ const HomePage = () => {
                 <input
                   type="text"
                   placeholder="Enter a City or Airport"
-                  className="w-full p-2 mt-2 border rounded"
+                  className="w-full p-2 mt-2 border rounded bg-black text-white" 
                   value={dropoffLocation}
                   onChange={(e) => setDropoffLocation(e.target.value)}
                 />
@@ -119,7 +128,7 @@ const HomePage = () => {
                   <label className="block text-sm">Pick Up Date</label>
                   <input
                     type="date"
-                    className="w-full p-2 mt-2 border rounded"
+                    className="w-full p-2 mt-2 border rounded bg-black text-white" 
                     value={pickupDate}
                     onChange={(e) => setPickupDate(e.target.value)}
                   />
@@ -128,7 +137,7 @@ const HomePage = () => {
                   <label className="block text-sm">Drop Off Date</label>
                   <input
                     type="date"
-                    className="w-full p-2 mt-2 border rounded"
+                    className="w-full p-2 mt-2 border rounded bg-black text-white" 
                     value={dropoffDate}
                     onChange={(e) => setDropoffDate(e.target.value)}
                   />
@@ -200,7 +209,7 @@ const HomePage = () => {
       </section>
 
       {/* Browse Cars Section */}
-      {/* <div className="bg-gray-100 py-12">
+      <div className="bg-gray-100 py-12">
         <div className="text-center mb-6">
           <h1 className="text-4xl font-bold">Find Your Dream Car</h1>
           <p className="mt-4 text-lg">Browse our wide range of used cars or list your car for sale!</p>
@@ -211,7 +220,7 @@ const HomePage = () => {
             <CarCard key={car.id} car={car} />
           ))}
         </div>
-      </div> */}
+      </div>
 
       {/* About Section */}
       <section className="py-16 bg-white">
@@ -243,9 +252,9 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div  style={{ marginTop: "50px"}} >
               <img
-                src="/path-to-your-about-image.jpg"
+                src="/assets/bg.jpg"
                 alt="Car keys"
                 className="w-full rounded shadow"
               />
@@ -271,7 +280,7 @@ const HomePage = () => {
               </ul>
               <div className="mt-6 flex items-center">
                 <img
-                  src="/path-to-your-founder-image.jpg"
+                  src="./assets/Avatarrrs.png"
                   alt="Founder"
                   className="w-12 h-12 rounded-full mr-4"
                 />
@@ -286,7 +295,7 @@ const HomePage = () => {
             </div>
             <div>
               <img
-                src="/path-to-your-experience-image.jpg"
+                src="./assets/hero-banner.jpg"
                 alt="Vintage car"
                 className="w-full rounded shadow"
               />
@@ -451,17 +460,17 @@ const HomePage = () => {
               {
                 title: "Rental Cars how to check driving fines?",
                 date: "30 Dec 2023",
-                imgSrc: "/path-to-blog1.jpg",
+                imgSrc: "/./assets/car-2.jpg",
               },
               {
                 title: "Rental cost of sport and other cars",
                 date: "21 Dec 2023",
-                imgSrc: "/path-to-blog2.jpg",
+                imgSrc: "./assets/car-6.jpg",
               },
               {
                 title: "Document required for car rental",
                 date: "27 Dec 2023",
-                imgSrc: "/path-to-blog3.jpg",
+                imgSrc: "./assets/car-5.jpg",
               },
             ].map((blog, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
@@ -501,274 +510,405 @@ const HomePage = () => {
 
       {/* Other sections of your page */}
       <section className="py-16 bg-white text-black">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6 text-red-600">Customer Support Center</h2>
-        <p className="mb-8 text-gray-700">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet
-          nemo expedita accusantium.
-        </p>
-        <Swiper
-          slidesPerView={4} // Default for desktop
-          spaceBetween={30}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 1000, disableOnInteraction: false }} // Timing set to 1 second
-          breakpoints={{
-            1024: { slidesPerView: 4 }, // Web
-            768: { slidesPerView: 3 }, // Tablet
-            640: { slidesPerView: 2 }, // Mobile
-          }}
-        >
-          <SwiperSlide>
-            <div className="support-card">
-              <img src="person1.jpg" alt="Person 1" />
-              <h3>MARTIN DOE</h3>
-              <p>Software Engineer</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6 text-red-600">
+            Customer Support Center
+          </h2>
+          <p className="mb-8 text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet
+            nemo expedita accusantium.
+          </p>
+          <Swiper
+            slidesPerView={4} // Default for desktop
+            spaceBetween={30}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 1000, disableOnInteraction: false }} // Timing set to 1 second
+            breakpoints={{
+              1024: { slidesPerView: 4 }, // Web
+              768: { slidesPerView: 3 }, // Tablet
+              640: { slidesPerView: 2 }, // Mobile
+            }}
+          >
+            <SwiperSlide>
+              <div className="support-card">
+                <img src="./assets/test/1.jpeg" alt="Person 1" />
+                <h3>MARTIN DOE</h3>
+                <p>Software Engineer</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="support-card">
-              <img src="person2.jpg" alt="Person 2" />
-              <h3>JANE SMITH</h3>
-              <p>Graphic Designer</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="support-card">
+                <img src="./assets/test/2.jpeg" alt="Person 2" />
+                <h3>JANE SMITH</h3>
+                <p>Graphic Designer</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="support-card">
-              <img src="person3.jpg" alt="Person 3" />
-              <h3>ALICE JOHNSON</h3>
-              <p>Product Manager</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="support-card">
+                <img src="./assets/test/3.jpeg" alt="Person 3" />
+                <h3>ALICE JOHNSON</h3>
+                <p>Product Manager</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="support-card">
-              <img src="person4.jpg" alt="Person 4" />
-              <h3>BOB BROWN</h3>
-              <p>UX Designer</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="support-card">
+                <img src="./assets/test/4.jpeg" alt="Person 4" />
+                <h3>BOB BROWN</h3>
+                <p>UX Designer</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="support-card">
-              <img src="person5.jpg" alt="Person 5" />
-              <h3>CHARLIE WHITE</h3>
-              <p>Data Analyst</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="support-card">
+                <img src="./assets/test/5.jpeg" alt="Person 5" />
+                <h3>CHARLIE WHITE</h3>
+                <p>Data Analyst</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="support-card">
-              <img src="person6.jpg" alt="Person 6" />
-              <h3>EMMA WATSON</h3>
-              <p>Marketing Specialist</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="support-card">
+                <img src="./assets/test/6.jpeg" alt="Person 6" />
+                <h3>EMMA WATSON</h3>
+                <p>Marketing Specialist</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="support-card">
-              <img src="person7.jpg" alt="Person 7" />
-              <h3>DAVID SMITH</h3>
-              <p>Content Writer</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="support-card">
+                <img src="./assets/test/7.jpeg" alt="Person 7" />
+                <h3>DAVID SMITH</h3>
+                <p>Content Writer</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="support-card">
-              <img src="person8.jpg" alt="Person 8" />
-              <h3>SOPHIA BROWN</h3>
-              <p>SEO Expert</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="support-card">
+                <img src="./assets/test/8.jpeg" alt="Person 8" />
+                <h3>SOPHIA BROWN</h3>
+                <p>SEO Expert</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </section>
-
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
 
       {/* <ClientReviewsSection /> */}
 
       <section className="py-16 bg-gray-100 text-black">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6 text-red-600">Our Clients Reviews</h2>
-        <p className="mb-8 text-gray-700">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-        <Swiper
-          slidesPerView={2} // Default for web and tablets
-          spaceBetween={30}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 1000, disableOnInteraction: false }}
-          breakpoints={{
-            1024: { slidesPerView: 2 }, // Web
-            768: { slidesPerView: 2 }, // Tablet
-            640: { slidesPerView: 1 }, // Mobile
-          }}
-        >
-          <SwiperSlide>
-            <div className="review-card">
-              <img src="client1.jpg" alt="Client 1" />
-              <h3>Person Name 1</h3>
-              <p>Profession 1</p>
-              <div className="rating-stars">★★★★☆</div>
-              <p>Review content goes here...</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6 text-red-600">
+            Our Clients Reviews
+          </h2>
+          <p className="mb-8 text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+          <Swiper
+            slidesPerView={2} // Default for web and tablets
+            spaceBetween={30}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 1000, disableOnInteraction: false }}
+            breakpoints={{
+              1024: { slidesPerView: 2 }, // Web
+              768: { slidesPerView: 2 }, // Tablet
+              640: { slidesPerView: 1 }, // Mobile
+            }}
+          >
+            <SwiperSlide>
+              <div className="review-card" >
+                <img src="./assets/test/9.jpeg" alt="Client 1" style={{marginLeft:"100px"}}/>
+                <h3>Person Name 1</h3>
+                <p>Profession 1</p>
+                <div className="rating-stars">★★★★☆</div>
+                <p>Review content goes here...</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="review-card">
-              <img src="client2.jpg" alt="Client 2" />
-              <h3>Person Name 2</h3>
-              <p>Profession 2</p>
-              <div className="rating-stars">★★★☆☆</div>
-              <p>Review content goes here...</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="review-card">
+                <img src="./assets/test/10.jpeg" alt="Client 2" style={{marginLeft:"100px"}}/>
+                <h3>Person Name 2</h3>
+                <p>Profession 2</p>
+                <div className="rating-stars">★★★☆☆</div>
+                <p>Review content goes here...</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="review-card">
-              <img src="client3.jpg" alt="Client 3" />
-              <h3>Person Name 3</h3>
-              <p>Profession 3</p>
-              <div className="rating-stars">★★★★★</div>
-              <p>Review content goes here...</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="review-card">
+                <img src="./assets/test/11.jpeg" alt="Client 3" style={{marginLeft:"100px"}}/>
+                <h3>Person Name 3</h3>
+                <p>Profession 3</p>
+                <div className="rating-stars">★★★★★</div>
+                <p>Review content goes here...</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="review-card">
-              <img src="client4.jpg" alt="Client 4" />
-              <h3>Person Name 4</h3>
-              <p>Profession 4</p>
-              <div className="rating-stars">★★★★☆</div>
-              <p>Review content goes here...</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="review-card">
+                <img src="./assets/test/5.jpeg" alt="Client 4" style={{marginLeft:"100px"}}/>
+                <h3>Person Name 4</h3>
+                <p>Profession 4</p>
+                <div className="rating-stars">★★★★☆</div>
+                <p>Review content goes here...</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="review-card">
-              <img src="client5.jpg" alt="Client 5" />
-              <h3>Person Name 5</h3>
-              <p>Profession 5</p>
-              <div className="rating-stars">★★★☆☆</div>
-              <p>Review content goes here...</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="review-card">
+                <img src="./assets/test/4.jpeg" alt="Client 5" style={{marginLeft:"100px"}} />
+                <h3>Person Name 5</h3>
+                <p>Profession 5</p>
+                <div className="rating-stars">★★★☆☆</div>
+                <p>Review content goes here...</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="review-card">
-              <img src="client6.jpg" alt="Client 6" />
-              <h3>Person Name 6</h3>
-              <p>Profession 6</p>
-              <div className="rating-stars">★★★★☆</div>
-              <p>Review content goes here...</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="review-card">
+                <img src="./assets/test/3.jpeg" alt="Client 6" style={{marginLeft:"100px"}}/>
+                <h3>Person Name 6</h3>
+                <p>Profession 6</p>
+                <div className="rating-stars">★★★★☆</div>
+                <p>Review content goes here...</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="review-card">
-              <img src="client7.jpg" alt="Client 7" />
-              <h3>Person Name 7</h3>
-              <p>Profession 7</p>
-              <div className="rating-stars">★★★★★</div>
-              <p>Review content goes here...</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="review-card">
+                <img src="./assets/test/2.jpeg" alt="Client 7" style={{marginLeft:"100px"}}/>
+                <h3>Person Name 7</h3>
+                <p>Profession 7</p>
+                <div className="rating-stars">★★★★★</div>
+                <p>Review content goes here...</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="review-card">
-              <img src="client8.jpg" alt="Client 8" />
-              <h3>Person Name 8</h3>
-              <p>Profession 8</p>
-              <div className="rating-stars">★★☆☆☆</div>
-              <p>Review content goes here...</p>
-              <div className="flex justify-center mt-2">
-                <a href="https://facebook.com" className="mx-2"><FaFacebookF /></a>
-                <a href="https://twitter.com" className="mx-2"><FaTwitter /></a>
-                <a href="https://instagram.com" className="mx-2"><FaInstagram /></a>
-                <a href="https://linkedin.com" className="mx-2"><FaLinkedinIn /></a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="review-card">
+                <img src="./assets/test/1.jpeg" alt="Client 8" style={{marginLeft:"100px"}} />
+                <h3>Person Name 8</h3>
+                <p>Profession 8</p>
+                <div className="rating-stars">★★☆☆☆</div>
+                <p>Review content goes here...</p>
+                <div className="flex justify-center mt-2">
+                  <a href="https://facebook.com" className="mx-2">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://twitter.com" className="mx-2">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://instagram.com" className="mx-2">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://linkedin.com" className="mx-2">
+                    <FaLinkedinIn />
+                  </a>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </section>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
     </div>
   );
 };

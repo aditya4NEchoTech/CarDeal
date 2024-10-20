@@ -9,6 +9,9 @@ import ContactPage from './pages/ContactPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import AdminDashboard from './admin/AdminDashboard';
+import CarManagement from './admin/CarManagement';
+import Transactions from './admin/Transactions';
+import UserManagement from './admin/UserManagement';
 import './styles/global.css';
 import './styles/tailwind.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -29,6 +32,9 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/AdminDashboard" element={<AdminDashboard />} />
+            <Route path="/car-management" element={<CarManagement />} />
+            <Route path="/transactions" element={<Transactions />} />
+            <Route path="/user-management" element={<UserManagement />} />
           </Routes>
         </main>
         <Footer />
